@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background: #050506;
+    --card-light: #1c1c24;
+    --card-dark: #110d13;
+    --footer: #110d13;
+    --linear-gradient: linear-gradient(
+        90deg,
+        #f1a581 7%,
+        #eb56b0 48%,
+        #5642d5 82%
+    );
+    --scroll-gradient: linear-gradient(
+        45deg,
+        rgba(241, 165, 129, 1) 7%,
+        rgba(235, 86, 176, 1) 48%,
+        rgba(86, 66, 213, 1) 82%
+    );
+    --footer-gradient: linear-gradient(
+        90deg,
+        #f1a581 7%,
+        #eb56b0 48%,
+        #5642d5 82%
+    );
+    --footer-container-gradient: linear-gradient(0deg, #050506 7%, #110d13 48%);
+    --font-color: #fff;
+    --font-color-dark: #050506;
+    --paragraph-color: #c0c0c0;
+    --pink: #eb56b0;
+    --navbar-height: 80px;
+    --footer-height: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: var(--scroll-gradient);
+    width: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    background-color: var(--background);
+    overflow: overlay;
+    color: var(--font-color);
+}
+
+h1 {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+p {
+    color: var(--paragraph-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* <-- Logo --> */
+
+.logo {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.logo h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+  .logo h1 {
+    font-size: 1.65rem;
+  }
+}
+
+/* <-- Navbar --> */
+
+.navbar {
+    backdrop-filter: blur(5px);
+    padding-inline: 3.5vw;
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.navbar > div
+{
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center ;
+}
+
+.main-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+}
+.fa-code {
+    margin-left: 1rem;
+}
+
+.nav-item {
+    line-height: 40px;
+    margin: 0 .75rem;
+}
+
+.nav-item a {
+    padding: 1rem 0;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.nav-item:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+    background: var(--font-color);
+}
+
+.nav-item .active {
+    color: var(--pink);
+}
+
+.nav-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar {
+        background-color: var(--background);
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        padding-block: 1rem;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        border-bottom: 2px solid var(--font-color);
+    }
+
+    .nav-menu.active {
+        align-items: center;
+        background-color: var(--background);
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item {
+        margin-block: 0.5rem;
+        width: fit-content;
+    }
+
+    .nav-item:hover:after {
+        background: transparent;
+    }
+
+    .nav-item .active {
+        color: var(--pink);
+        border: none;
+    }
+    .nav-links {
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-icon {
+        width: 1.8rem;
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--font-color);
+    }
+}
+
+/* <-- Footer --> */
+
+.foot-container {
+    display: flex;
+    margin-top: 13rem;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature__icon {
+    font-size: 2rem;
+    color: var(--font-color);
+    transition: 0.5s;
+}
+
+.feature__icon:hover {
+    transform: translateY(-12px);
+}
+
+.foot {
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(
+        to top,
+        #000000,
+        #240d16,
+        #400e29,
+        #5b0c3f,
+        #76055b,
+        #900363,
+        #aa016a,
+        #c5006f,
+        #dc1d5a,
+        #e93e43,
+        #ed5f2a,
+        #e97e00
+    );
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.social_icon li {
+    list-style: none;
+}
+
+.foot p {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+}
+
+.wave {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wave.png);
+    background-size: 1000px 100px;
+}
+
+#wave1 {
+    z-index: 10;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+
+#wave2 {
+    z-index: 9;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave2 4s linear infinite;
+}
+
+#wave3 {
+    z-index: 9;
+    opacity: 0.25;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+
+#wave4 {
+    z-index: 9;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave2 2s linear infinite;
+}
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatewave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* <-- Button --> */
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    background: var(--linear-gradient);
+    border: none;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    color: var(--font-color);
+    cursor: pointer;
+    border: 1px solid var(--background);
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+.brand-btn {
+    padding: 0.7rem 2rem;
+}
+
+.connect-wallet-btn {
+    background-color: var(--font-color);
+    color: var(--font-color-dark);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    text-transform: capitalize;
+    border-radius: 0.25rem;
+    font-weight: 550;
+}
+
+@media screen and (max-width: 55em) {
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .connect-wallet-btn {
+      padding: .25rem 0.75rem;
+      font-size: .95rem;
+    }
+}
+
+/* <-- Notification --> */
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    justify-content: center;
+    z-index: 1000;
+}
+
+.notification-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--pink);
+    padding: 2rem 1rem;
+    border-radius: 0.6rem;
+    color: var(--font-color);
+    background-color: var(--card-light);
+    width: 30%;
+}
+
+.notification-window p
+{
+    padding: 0 2rem;
+}
+
+.notification-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 2.5rem;
+}
+
+@media screen and (max-width: 35em) {
+    .heroSection {
+        width: 90%;
+    }
+
+    .notification-window {
+        width: 80%;
+    }
+}

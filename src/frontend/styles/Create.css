@@ -1,0 +1,331 @@
+textarea::-webkit-scrollbar{
+  width: .4rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-track{
+  border-radius: 0;
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb{
+  border-radius: 5rem;
+  background:  var(--pink);
+  width: .1rem;
+  padding-right: .3rem;
+}
+
+textarea::-webkit-scrollbar-track-piece {
+  margin: 1rem;
+}
+
+.minting
+{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.minting-info
+{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.minting-info img
+{
+  width: 105%;
+  height: auto;
+}
+
+.uploadNFT
+{
+  width: 45%;
+}
+  
+.uploadNFT_box
+{
+  color: var(--font-color);
+  width: 80%;
+  margin:  0 auto;
+}
+
+.Form_box_input
+{
+  margin-bottom: 1.8rem;
+}
+  
+.Form_box_input label{
+    width: 100%;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .Form_box_input_userName{
+    font-size: .9rem;
+    color: var(--font-color);
+    width: 100%;
+    border: 1px solid var(--pink);
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    margin-top: .2rem;
+    outline: none;
+  }
+  
+  
+  .Form_box_input_file{
+    font-size: .9rem;
+    color: var(--font-color);
+    width: 100%;
+    border: 1px solid var(--pink);
+    padding-right: 1rem;
+    border-radius: 1rem;
+    margin-top: .2rem;
+    margin-bottom: .4rem;
+    outline: none;
+    cursor: pointer;
+  }
+
+.select-menu{
+  position: relative;
+  font-size: .9rem;
+  color: var(--font-color);
+  width: 100%;
+  margin-top: .2rem;
+}
+
+.select-btn i{
+  transition: 0.3s;
+}
+
+  .select-btn
+  {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .select-btn-active
+  {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  ul
+  {
+    list-style-type: none;
+  }
+
+  .options
+  {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 33;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--pink);
+    position: absolute;
+  }
+
+  .option
+  {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0 .7rem;
+  }
+
+  .option:hover
+  {
+    background-color: #bf0073;
+  }
+  
+  .Form_box_input_file::file-selector-button{
+    background-color: var(--pink);
+    padding: .6rem 1rem;
+    cursor: pointer;
+    border: 1px solid var(--pink);
+    margin-right: 1rem;
+  }
+  
+  .Form_box_input p{
+    margin: 0 1rem;
+    font-size: .9rem;
+  }
+  rm_box_input textarea
+  .Fo::placeholder{
+    font-size: .9rem;
+    opacity: .6;
+    color: var(--font-color);
+  }
+  
+  .Form_box_input input::placeholder{
+    font-size: .9rem;
+    opacity: .6;
+    color: var(--font-color);
+  }
+  
+  .Form_box_input textarea{
+    margin-top: .2rem; 
+    color: var(--font-color);
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border-radius: 1rem;
+    padding: .8rem 1rem;
+    border: 1px solid var(--pink);
+    resize: none;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .create-btn
+  {
+    padding: .8rem 1.6rem;
+  }
+
+@media screen and (max-width: 60em) {
+  .minting
+  {
+    flex-direction: column;
+  }
+
+  .minting-info
+  {
+    width: auto;
+  }
+
+  .uploadNFT
+  {
+    width: auto;
+    margin-block: 0;
+  }
+
+  .uploadNFT_box
+  {
+    width: 90%;
+  }
+  
+  .uploadNFT_box_heading p
+  {
+    width: 100%;
+  }
+  
+  .uploadNFT_box_heading h1
+  {
+    font-size: 2rem;
+  }
+  
+  .uploadNFT_box_title h2
+  {
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+}
+
+
+
+.step{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 8rem auto;
+    padding: 1rem;
+    color: var(--font-color);
+    background-color: var(--card-light);
+    border-radius: 1rem;
+}
+
+.step > h1
+{
+    align-self: center;
+    padding-bottom: 2rem;
+  }
+  
+  .step_box
+  {
+    display: flex;
+    text-align: center;
+  }
+  
+  .step_box_item
+  {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 25%;
+  }
+  
+  .step_box_item > p
+  {
+    font-size: .9rem;
+  }
+
+  .step_box_item i
+  {
+    color: var(--font-color);
+    font-size: 2rem;
+  }
+  
+  .step_box_item_step
+  {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step_box_item_step span
+  {
+    font-size: .9rem;
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    background: var(--linear-gradient);
+    color: var(--font-color);
+  }
+  
+@media screen and (max-width: 35em) {
+  .step
+  {
+    width: 90%;
+  }
+
+  .minting-info
+  {
+    display: none;
+  }
+}
+  
+@media screen and (max-width: 40em) {
+  .step_box
+  {
+    flex-wrap: wrap;
+  }
+  
+  .step_box_item
+  {
+    width: 50%;
+  }
+}

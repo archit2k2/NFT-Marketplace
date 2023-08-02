@@ -1,0 +1,98 @@
+.connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.await-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1.25rem;
+}
+
+.await-connection h1 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 960px) {
+    .await-connection h1 {
+        font-size: 1rem;
+    }
+}
+
+/* <-- Spinner --> */
+
+.await-spinner {
+    transform: scale(.825);
+}
+
+.spinner {
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    grid-template-rows: repeat(3, 20px);
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    background-color: '#0033cc';
+    animation: scaleInOut 1s infinite;
+}
+
+#s1 {
+    background-color: #0033cc;
+    animation-delay: 0.125s;
+}
+#s2 {
+    background-color: #0040ff;
+    animation-delay: 0.25s;
+}
+#s3 {
+    background-color: #3366ff;
+    animation-delay: 0.375s;
+}
+#s4 {
+    background-color: #4d88ff;
+    animation-delay: 0.5s;
+}
+#s5 {
+    background-color: #4d88ff;
+    animation-delay: 0.625s;
+}
+#s6 {
+    background-color: #4d88ff;
+    animation-delay: 0.750s;
+}
+#s7 {
+    background-color: #3366ff;
+    animation-delay: 0.875s;
+}
+#s8 {
+    background-color: #0040ff;
+    animation-delay: 1s;
+}
+#s9 {
+    background-color: #0033cc;
+    animation-delay: 1.125s;
+}
+
+@keyframes scaleInOut {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+}

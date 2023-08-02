@@ -1,0 +1,247 @@
+/* <-- About Hero --> */
+
+.about{
+    color: var(--font-color);
+    width: 80%;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    margin: var(--navbar-height) auto;
+    gap: 4rem;
+}
+
+.about_box_hero{
+    display: flex;
+    align-items: center;
+}
+
+.about_box_hero img{
+    width: 100%;
+    height: auto;
+}
+
+.about_box_hero_left
+{
+    width: 45%;
+    padding-right: 3rem;
+}
+
+.about_box_hero_left h1{
+    font-weight: bold;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    font-size: 2.6rem;
+}
+
+.about_box_hero_left p {
+   font-size: 1.3rem;
+   line-height: 1.5;
+}
+
+.about_box_hero_right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+@media screen and (max-width: 55em) {
+    .about{
+        width: 90%;
+    }
+    .about_box_hero{
+        flex-direction: column;
+    }
+
+    .about_box_hero_left
+    {
+        width: auto;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about_box_hero_right
+    {
+        width: auto;
+    }
+}
+
+/* <-- About Brand --> */
+
+.Brand{
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.Brand_box_left_logo{
+    color: rgb(7, 201, 255);
+    font-size: 4rem;
+}
+
+.Brand img{
+    width: 100%;
+    height: auto;
+  }
+
+.Brand_box{
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.Brand_box_left
+{
+    width: 42%;
+}
+
+.Brand_box_left h1{
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-weight: bolder;
+}
+
+.Brand_box_left p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.Brand_box_left_btn{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Brand_box_right
+{
+    width: 58%;
+}
+
+@media screen and (max-width: 60em) {
+    .Brand_box{
+        flex-direction: column;
+    }
+
+    .Brand_box_left, .Brand_box_right
+    {
+        width: auto;
+    }
+
+    .Brand_box_left h1{
+        font-size: 2.5rem;
+    }
+    .Brand_box_left p{
+        margin-top: -.5rem;
+    }
+}
+
+/* <-- Email --> */
+
+.email
+{
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+}
+
+.email-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.email-info h1
+{
+    color: var(--pink);
+    font-size: 3rem;
+    padding-right: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.email-info p
+{
+    margin-bottom: 1rem;
+    padding-right: 8rem;
+    color: var(--font-color);
+}
+
+.image-container
+{
+    width: 50%;
+}
+
+.image-container img
+{
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    width: 60%;
+    background-color: var(--card-light);
+    border-radius: 40px;
+    position: relative;
+    margin-top: 40px;
+} 
+
+
+  
+.email-info input {
+    width: 100%;
+    border-radius: 40px;
+    border: 0;
+    background: none;
+    color: var(--font-color);
+    padding: .9rem 1rem;
+    outline: none;
+    font-size: .9rem;
+}
+
+.email-info button {
+    background-color: var(--pink);
+    border: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    outline: none;
+    cursor: pointer;
+    color: var(--font-color);
+    transition: .3s linear;
+    &:hover {
+      opacity: .5;
+    }
+}
+
+@media screen and (max-width: 35em) {
+    .text 
+    {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 60em) {
+    .email
+    {
+        gap: 3rem;
+        flex-direction: column;
+    }
+
+    .email-info, .image-container
+    {
+        width: auto;
+    }
+
+    .email-info h1, .email-info p
+    {
+        padding-right: 1.3rem;
+    }
+}
